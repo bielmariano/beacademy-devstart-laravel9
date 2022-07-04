@@ -1,7 +1,7 @@
 @extends('template.users')
-@section('title', 'Visualizar Usuário')
+@section('title', $title)
 @section('body')
-        <h1>Listagem de Usuários</h1>
+        <h1>Usuário {{$user->name}}</h1>
         <table class="table">
   <thead class="text-center">
     <tr>
