@@ -7,6 +7,7 @@
   <thead>
     <tr>
       <th scope="col">ID#</th>
+      <th scope="col">Usuário</th>
       <th scope="col">Título</th>
       <th scope="col">Postagem</th>
       <th scope="col">Data de Cadastro</th>
@@ -17,6 +18,7 @@
     <tr>
 
       <th scope="row">{{ $post->id}}</th>
+      <td>{{ $post->user->name}}</td>
       <td>{{ $post->title}}</td>
       <td>{{$post->post}}</td>
       <td>{{date('d/m/Y - H:i', strtotime($post->created_at))}}</td>
