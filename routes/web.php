@@ -29,3 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/viacep', [ViaCepController::class, 'index'])->name('viacep.index.post');
     Route::get('/viacep/{cep}', [ViaCepController::class, 'show'])->name('viacep.show');
 });
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin', [UserController::class, 'admin'])->name('admin');
+});
